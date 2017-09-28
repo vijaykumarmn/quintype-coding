@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Quintype App</title>
+    <link rel="stylesheet" href="/assets/style.css" type="text/css"/>
+    <script type="text/javascript" src="/assets/app.js"></script>
+    <script>
+         function checkDiamond(displayDiamondFlag, rowCount, columnCount) {
+        
+          let value = document.getElementsByClassName('diamondsweeper-board')[0];
+          var display = document.getElementById("displayCount");
+          if(displayDiamondFlag) {
+             value.rows[rowCount].children[columnCount].firstElementChild.children["0"].className = 'cell diamond'
+           }
+          else {
+            let rscore=0;
+            value.rows[rowCount].children[columnCount].firstElementChild.children["0"].className = 'cell empty'
+           }
+      }     
+  </script>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div class="messages"></div>
+        <p>Score:<span id="displayCount">00</span></p>
+        <table class="diamondsweeper-board">
+          <tbody>
+            <tr>
+              <td><button onclick="checkDiamond(true,  0, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 0, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 0, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 0, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 0, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 0, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 0, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  0, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+             <td><button onclick="checkDiamond(false, 1, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(true, 1, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 1, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 1, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 1, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 1, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 1, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 1, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+              <td><button onclick="checkDiamond(false,  2, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 2, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(true, 2, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 2, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 2, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 2, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 2, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  2, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+              <td><button onclick="checkDiamond(false,  3, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 3, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 3, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(true, 3, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 3, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 3, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 3, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  3, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+              <td><button onclick="checkDiamond(false,  4, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 4, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 4, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 4, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(true, 4, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 4, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 4, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  4, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+              <td><button onclick="checkDiamond(false,  5, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 5, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 5, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 5, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 5, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(true, 5, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 5, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  5, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+             <td><button onclick="checkDiamond(false,   6, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 6, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 6, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 6, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 6, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 6, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(true, 6, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false,  6, 7)"><div class="cell unknown"></button></div></td>
+            </tr>
+            <tr>
+              <td><button onclick="checkDiamond(false,  7, 0)"><div class='cell unknown'></div></button></td>
+              <td><button onclick="checkDiamond(false, 7, 1)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 7, 2)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 7, 3)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 7, 4)"><div class="cell unknown"></div></button></td>
+              <td><button onclick="checkDiamond(false, 7, 5)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(false, 7, 6)"><div class="cell unknown"></button></div></td>
+              <td><button onclick="checkDiamond(true,  7, 7)"><div class="cell unknown"></button></div></td>
+            </tr7
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
